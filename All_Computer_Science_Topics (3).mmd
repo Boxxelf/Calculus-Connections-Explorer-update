@@ -1,0 +1,117 @@
+---
+config:
+    layout: elk
+---
+flowchart TD
+    AAA(All Computer Science Topics)
+    A(["Motivating the need for calculus &amp; limits"])    
+    A --> B(["Introducing the limit concept"])
+    B --> C(["Determining limits of functions graphically and numerically"]) & H(["Motivating the need for the derivative and introducing the derivative concept"])
+    C --> D(["Determining the limits of functions with limit laws"]) & E(["Limits at infinity and infinite limits"])
+    D --> F(["Epsilon-delta definition of the limit"]) & G(["Continuity, discontinuities, and the intermediate value theorem"]) & J(["Basic differentiation rules"]) & BB(["Sequences"])
+    H --> I(["Defining the derivative as a function"])
+    I --> J & N(["Applications of derivatives: rates of change and exponential models"]) & P(["Linear approximation"])
+    J --> K(["Product and quotient rules"]) & L(["Trigonometric derivatives"]) & M(["Derivatives of logarithmic and exponential functions"]) & O(["The chain rule"]) & S@{ label: "L'Hopitals rule" } & W(["Newtons method"])
+    O --> R(["The shape of graphs and concavity"]) & Q(["Extreme values"]) & U(["Implicit differentiation"]) & AJ(["Integration with the substitution rule"]) & AL(["Integrals involving inverse trigonometric functions"]) & AB(["Hyperbolic functions"]) & BJ(["Parametric equations"])
+    K --> Q & AM(["Integration by parts"])
+    L --> Q & T(["Antiderivatives"]) & BH(["Taylor series"]) & BK(["Polar coordinates"])
+    M --> Q & T & BH
+    N --> V(["Related rates"]) & AA(["Motivating the need for integrals and approximating the area under curves"]) & AW(["Introducing the concept of differential equations"])
+    U --> V
+    Q --> X(["Optimization"]) & Y(["The mean value theorem"]) & Z(["Sketching and graphing functions using information from derivatives"])
+    R --> Z
+    AA --> AC(["Definite integrals"])
+    AC --> AD(["The fundamental theorem of calculus"]) & AE(["Using integrals to find the area between two curves"]) & AF(["Using integrals to find the volume of solids of revolution"]) & AG(["Using integrals to find arc length and surface area"]) & AH(["Using integrals for physical applications"]) & AR(["Integration using tables, technology, and numerical approaches"]) & AS(["Improper integrals"]) & AU(["Application to physics"]) & AV(["Application to economics"]) & AZ(["Modeling with differential equations"]) & BL(["Area and arc length in polar coordinates"])
+    T --> AD & AK(["Integrals of exponential and logarithmic functions"]) & AJ & AL & AB & AM & AN(["Trigonometric integrals"]) & AP(["Integration using the method of partial fractions"])
+    AD --> AI(["Indefinite integrals and the net change theorem"])
+    AJ --> AH & AG & AO(["Trigonometric substitutions"]) & AY(["Separable differential equations"]) & BA(["Special first-order linear differential equations"]) & BL
+    AK --> AH
+    AN --> AO
+    AP --> AQ(["General integration strategies and approaches"])
+    AO --> AQ
+    AM --> AQ
+    AQ --> AR & AS & AU & AV
+    AS --> AT(["Application to probability"])
+    AW --> AX(["Direction fields and Eulers method"]) & AY & BA
+    AY --> AZ
+    BB --> BC(["Series"])
+    BC --> BD(["Convergence and divergence"])
+    BD --> BE(["Comparison tests"]) & BF(["The ratio and root tests"]) & BG(["Alternating series"]) & BH
+    BH --> BI(["Power series and functions"])
+    BK --> BL & BM(["Conic sections"])
+    BJ --> BM
+    S@{ shape: stadium}
+
+    classDef limits stroke:#377eb8,font-size:18
+    classDef limits-ghost stroke:#377eb80D,fill:#377eb80D,color:#d3d3d3,font-size:18
+    classDef limits-pre stroke:#377eb866,fill:#377eb866,font-size:18
+    classDef limits-direct stroke:#377eb8,fill:#377eb8A6,stroke-width:4px,font-size:18
+   
+    style AAA fill:#4daf4a99,stroke:#4daf4a,font-size:26
+
+A:::limits-direct
+AA:::limits-direct
+AB:::limits-direct
+AC:::limits-direct
+AD:::limits-direct
+AH:::limits-direct
+AI:::limits-direct
+AK:::limits-direct
+AT:::limits-direct
+AU:::limits-direct
+AW:::limits-direct
+B:::limits-direct
+BB:::limits-direct
+BC:::limits-direct
+BD:::limits-direct
+BE:::limits-direct
+BH:::limits-direct
+BI:::limits-direct
+BJ:::limits-direct
+BK:::limits-direct
+C:::limits-direct
+D:::limits-direct
+E:::limits-direct
+G:::limits-direct
+H:::limits-direct
+I:::limits-direct
+J:::limits-direct
+L:::limits-direct
+M:::limits-direct
+N:::limits-direct
+O:::limits-direct
+Q:::limits-direct
+R:::limits-direct
+S:::limits-direct
+U:::limits-direct
+W:::limits-direct
+X:::limits-direct
+AJ:::limits-pre
+AM:::limits-pre
+AN:::limits-pre
+AO:::limits-pre
+AP:::limits-pre
+AQ:::limits-pre
+AS:::limits-pre
+K:::limits-pre
+T:::limits-pre
+AE:::limits-ghost
+AF:::limits-ghost
+AG:::limits-ghost
+AL:::limits-ghost
+AR:::limits-ghost
+AV:::limits-ghost
+AX:::limits-ghost
+AY:::limits-ghost
+AZ:::limits-ghost
+BA:::limits-ghost
+BF:::limits-ghost
+BG:::limits-ghost
+BL:::limits-ghost
+BM:::limits-ghost
+F:::limits-ghost
+P:::limits-ghost
+V:::limits-ghost
+Y:::limits-ghost
+Z:::limits-ghost
+linkStyle 5,12,23,35,38,40,41,42,45,46,47,49,52,53,54,58,65,67,68,69,75,78,80,81,82,83,87,88,91,92,93 stroke:#d3d3d3,fill:none

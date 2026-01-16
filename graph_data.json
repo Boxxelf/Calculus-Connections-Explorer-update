@@ -1,0 +1,1988 @@
+{
+  "nodes": [
+    {
+      "id": "A",
+      "number_id": 1,
+      "label": "Motivating the need for calculus & limits",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Working with data",
+            "rationale": "Isaac Newton's development of core calculus ideas was in part inspired by his wish to understand laws of physics, as in Philosophi\u00e6 Naturalis Principia Mathematica. These laws were designed to be consistent with data. Gauss's work on predicting celestial mechanics from data is grounded in calculus. Some of the earliest roots of calculus are grounded in data analysis. "
+          },
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Computing derivatives is essential for gradient descent."
+          },
+          {
+            "cs_topic": "Regression",
+            "rationale": "Regression often tries to minimize the function that represents the sum of squared errors. Finding the minima of a function involves computing derivatives."
+          },
+          {
+            "cs_topic": "Clustering",
+            "rationale": "In k-means, for instance, the key step is finding the mean of a collection of points, which corresponds to finding the point which minimizes the sum of squared differences."
+          },
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "Backpropagation, which is used to train neural networks, is built on calculus."
+          },
+          {
+            "cs_topic": "Advanced Deep Learning",
+            "rationale": "Advanced Deep Learning requires at least as much knowledge as Neural Networks."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Big-O notation",
+            "rationale": "L'Hopital's rule, for example, is used for comparing the growth rates of functions, which is relevant for Big-O notation. The definition of Big-O notation relies on limits."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Computing derivatives is essential for gradient descent."
+          },
+          {
+            "cs_topic": "Regression",
+            "rationale": "Regression often tries to minimize the function that represents the sum of squared errors. Finding the minima of a function involves computing derivatives."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Images (\u00a71)",
+            "rationale": "A digital image is a discrete 2D function. Calculus helps to think about the continuous function."
+          }
+        ]
+      }
+    },
+    {
+      "id": "B",
+      "number_id": 2,
+      "label": "Introducing the limit concept",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The definition of the derivative is given in terms of limits. Derivatives are essential for gradient descent."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Big-O notation",
+            "rationale": "L'Hopital's rule, for example, is used for comparing the growth rates of functions, which is relevant for Big-O notation. The definition of Big-O notation relies on limits."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The definition of the derivative is given in terms of limits. Derivatives are essential for gradient descent."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Defining/Storing/Rendering (\u00a722) [all]",
+            "rationale": "A limit is used to define the tangent of a curve. (page 578)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C",
+      "number_id": 3,
+      "label": "Determining limits of functions graphically and numerically",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The definition of the derivative is given in terms of limits. Derivatives are essential for gradient descent."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Big-O notation",
+            "rationale": "L'Hopital's rule, for example, is used for comparing the growth rates of functions, which is relevant for Big-O notation. The definition of Big-O notation relies on limits."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The definition of the derivative is given in terms of limits. Derivatives are essential for gradient descent."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Defining/Storing/Rendering (\u00a722) [all]",
+            "rationale": "A limit is used to define the tangent of a curve. (page 578)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "H",
+      "number_id": 9,
+      "label": "Motivating the need for the derivative and introducing the derivative concept",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The definition of the derivative is given in terms of limits. Derivatives are essential for gradient descent."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Big-O notation",
+            "rationale": "L'Hopital's rule, for example, is used for comparing the growth rates of functions, which is relevant for Big-O notation. The definition of Big-O notation relies on limits."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The definition of the derivative is given in terms of limits. Derivatives are essential for gradient descent."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Defining/Storing/Rendering (\u00a722) [all]",
+            "rationale": "The tangent of a curve is defined as a derivative. (page 578)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "D",
+      "number_id": 4,
+      "label": "Determining the limits of functions with limit laws",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The definition of the derivative is given in terms of limits. Derivatives are essential for gradient descent."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Big-O notation",
+            "rationale": "L'Hopital's rule, for example, is used for comparing the growth rates of functions, which is relevant for Big-O notation. The definition of Big-O notation relies on limits."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The definition of the derivative is given in terms of limits. Derivatives are essential for gradient descent."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Defining/Storing/Rendering (\u00a722) [all]",
+            "rationale": "A limit is used to define the tangent of a curve. (page 578)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E",
+      "number_id": 6,
+      "label": "Limits at infinity and infinite limits",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Overfitting/underfitting",
+            "rationale": "Analyzing the limit of a sequence might come up when graphing a loss function in terms of a hyperparameter."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Big-O notation",
+            "rationale": "L'Hopital's rule, for example, is used for comparing the growth rates of functions, which is relevant for Big-O notation. The definition of Big-O notation relies on limits."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Robotics",
+            "rationale": "Analyzing the limit of a sequence might come up when reasoning about a sequence of states."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Defining/Storing/Rendering (\u00a722) [all]",
+            "rationale": "A limit is used to define the tangent of a curve. (page 578)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "F",
+      "number_id": 7,
+      "label": "Epsilon-delta definition of the limit",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Algorithms"
+      ],
+      "rationales": {
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "The epsilon-delta definition of the limit is an important pre-cursor to formal definitions that appear in algorithm analysis, e.g., the definition of Big-O."
+          }
+        ]
+      }
+    },
+    {
+      "id": "G",
+      "number_id": 8,
+      "label": "Continuity, discontinuities, and the intermediate value theorem",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Working with data",
+            "rationale": "The intermediate value theorem is a fundamental theorem of calculus. Reasoning about continuity is relevant for choosing what type of regression model to use (e.g., linear regression, polynomial regression, etc.)."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "The intermediate value theorem can be used to show the existence of a solution, which an algorithm can then find. Bisection method is an example."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Defining/Storing/Rendering (\u00a722) [all]",
+            "rationale": "Continuity is an important property of curves. (page 580)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "J",
+      "number_id": 11,
+      "label": "Basic differentiation rules",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Computing derivatives is essential for gradient descent."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "Derivative rules are useful for finding the maxima or minima of a function, which can be relevant for analyzing the best/worst-case complexity of an algorithm."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Computing derivatives is essential for gradient descent."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Signal Processing Concepts (\u00a79)  [\u00a79.1, \u00a79.2, \u00a79.3, \u00a79.4]",
+            "rationale": "The derivative of a sinc function is computed. (page 195)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BB",
+      "number_id": 5,
+      "label": "Sequences",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Working with data",
+            "rationale": "Many loss functions are defined as sums. Gradient descent is an iterative process that generates a sequence of approximations."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "Recurrence relations, which are used to analyze the complexity of recursive algorithms, define sequences. Analyzing the convergence of sequences is important."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Robotics",
+            "rationale": "Analyzing the limit of a sequence might come up when reasoning about a sequence of states."
+          }
+        ]
+      }
+    },
+    {
+      "id": "I",
+      "number_id": 10,
+      "label": "Defining the derivative as a function",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The definition of the derivative is given in terms of limits. Derivatives are essential for gradient descent."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "Derivative rules are useful for finding the maxima or minima of a function, which can be relevant for analyzing the best/worst-case complexity of an algorithm."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The definition of the derivative is given in terms of limits. Derivatives are essential for gradient descent."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Defining/Storing/Rendering (\u00a722) [all]",
+            "rationale": "The tangent of a curve is defined as a derivative. (page 578)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "N",
+      "number_id": 18,
+      "label": "Applications of derivatives: rates of change and exponential models",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The derivative is the rate of change. Gradient descent is all about finding the direction of steepest descent (rate of change)."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "Rates of change are fundamental to analyzing how algorithm performance scales with input size."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The derivative is the rate of change. Gradient descent is all about finding the direction of steepest descent (rate of change)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "P",
+      "number_id": 24,
+      "label": "Linear approximation",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Gradient descent relies on a linear approximation of the function at the current point (using the tangent line/plane)."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Numerical methods",
+            "rationale": "Linear approximation (like in Newton's method) is a core concept for many numerical algorithms."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Gradient descent relies on a linear approximation of the function at the current point (using the tangent line/plane)."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Defining/Storing/Rendering (\u00a722) [all]",
+            "rationale": "The tangent of a curve is its linear approximation. (page 578)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "K",
+      "number_id": 12,
+      "label": "Product and quotient rules",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Computing derivatives is essential for gradient descent. The product rule is a basic differentiation rule."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "Derivative rules are useful for finding the maxima or minima of a function, which can be relevant for analyzing the best/worst-case complexity of an algorithm."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Computing derivatives is essential for gradient descent. The product rule is a basic differentiation rule."
+          }
+        ]
+      }
+    },
+    {
+      "id": "L",
+      "number_id": 14,
+      "label": "Trigonometric derivatives",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Advanced Deep Learning",
+            "rationale": "Some activation functions or models (e.g., in signal processing based ML) might involve trigonometric functions."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "Analysis of algorithms related to geometry, physics simulations, or signal processing might involve trigonometric functions."
+          }
+        ]
+      }
+    },
+    {
+      "id": "M",
+      "number_id": 16,
+      "label": "Derivatives of logarithmic and exponential functions",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Regression",
+            "rationale": "Logistic regression uses the sigmoid function, which is exponential. Cross-entropy loss involves logarithms. Derivatives are needed for optimization."
+          },
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "Common activation functions like sigmoid and softmax involve exponentials. Loss functions like cross-entropy use logarithms."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "Analyzing algorithms with logarithmic (e.g., binary search) or exponential (e.g., brute force) complexity."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Regression",
+            "rationale": "Logistic regression uses the sigmoid function, which is exponential. Cross-entropy loss involves logarithms. Derivatives are needed for optimization."
+          },
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "Common activation functions like sigmoid and softmax involve exponentials. Loss functions like cross-entropy use logarithms."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Color/Light/Materials (\u00a717) [all]",
+            "rationale": "Exponential function used in Phong model. (page 428)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "O",
+      "number_id": 19,
+      "label": "The chain rule",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "Backpropagation is essentially a large, recursive application of the chain rule to compute the gradient of the loss function with respect to each weight in the network."
+          },
+          {
+            "cs_topic": "Advanced Deep Learning",
+            "rationale": "Backpropagation, built on the chain rule, is fundamental to all deep learning models."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "Used in optimization problems where functions are composed."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "Backpropagation is essentially a large, recursive application of the chain rule to compute the gradient of the loss function with respect to each weight in the network."
+          }
+        ]
+      }
+    },
+    {
+      "id": "S",
+      "number_id": 27,
+      "label": "L'Hopitals rule",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Algorithms"
+      ],
+      "rationales": {
+        "Algorithms": [
+          {
+            "cs_topic": "Big-O notation",
+            "rationale": "L'Hopital's rule is used for comparing the growth rates of functions (by taking the limit of their ratio), which is the core idea of Big-O notation (e.g., comparing n log n vs n^2)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "W",
+      "number_id": 30,
+      "label": "Newtons method",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Newton's method is an optimization algorithm (a second-order method) for finding roots or local extrema. It's an alternative/extension to standard gradient descent."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Numerical methods",
+            "rationale": "Newton's method is a classic and powerful numerical algorithm for finding roots of functions."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Newton's method is an optimization algorithm (a second-order method) for finding roots or local extrema. It's an alternative/extension to standard gradient descent."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Ray Tracing (\u00a712) [all]",
+            "rationale": "Newton's method is used to find the intersection of a ray and a surface. (page 307)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R",
+      "number_id": 26,
+      "label": "The shape of graphs and concavity",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Concavity (determined by the second derivative) tells us if a critical point is a minimum, maximum, or saddle point. This is crucial for optimization. Convex functions (always concave up) are ideal for gradient descent as they guarantee a global minimum."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Optimization",
+            "rationale": "Understanding concavity/convexity is fundamental to optimization algorithms, as it determines if a local minimum is also a global one."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Concavity (determined by the second derivative) tells us if a critical point is a minimum, maximum, or saddle point. This is crucial for optimization. Convex functions (always concave up) are ideal for gradient descent as they guarantee a global minimum."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Blending Functions, B\u00e9zier/Hermite, Catmull-Rom, Interpolating vs. Approximating, Subdivision (curves and surfaces), Picewise Curves/Splines (\u00a715) [all]",
+            "rationale": "The shape of the curve is important."
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q",
+      "number_id": 25,
+      "label": "Extreme values",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The entire goal of training most ML models is an optimization problem: finding the minimum value (an extremum) of a loss function."
+          },
+          {
+            "cs_topic": "Regression",
+            "rationale": "Linear regression, for example, is solved by finding the parameters that minimize the sum of squared errors (an extreme value problem)."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Optimization",
+            "rationale": "Many algorithms are optimization algorithms, which are explicitly designed to find the maximum or minimum value of a function."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "The entire goal of training most AI models is an optimization problem: finding the minimum value (an extremum) of a loss function."
+          },
+          {
+            "cs_topic": "Game theory",
+            "rationale": "Finding optimal strategies in game theory often involves finding the extrema (minimax) of a payoff function."
+          }
+        ]
+      }
+    },
+    {
+      "id": "U",
+      "number_id": 29,
+      "label": "Implicit differentiation",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Computer Graphic": [
+          {
+            "cs_topic": "Defining/Storing/Rendering (\u00a722) [all]",
+            "rationale": "The tangent of an implicit curve is computed. (page 582)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AJ",
+      "number_id": 21,
+      "label": "Integration with the substitution rule",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Advanced Deep Learning",
+            "rationale": "Substitution rule is a basic integration technique. Certain probabilistic models or advanced optimizations might require solving integrals."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "Used in solving integrals that might arise in probabilistic analysis or physics-based simulations."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Probabilistic reasoning",
+            "rationale": "Calculating probabilities from continuous probability density functions (PDFs) requires integration. U-substitution is a fundamental technique."
+          }
+        ]
+      }
+    },
+    {
+      "id": "AL",
+      "number_id": 22,
+      "label": "Integrals involving inverse trigonometric functions",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Algorithms"
+      ],
+      "rationales": {
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "May come up in geometric algorithms or complex probabilistic analyses."
+          }
+        ]
+      }
+    },
+    {
+      "id": "AB",
+      "number_id": 20,
+      "label": "Hyperbolic functions",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Neural networks",
+            "rationale": "The hyperbolic tangent (tanh) is a very common activation function in neural networks."
+          }
+        ]
+      }
+    },
+    {
+      "id": "BJ",
+      "number_id": 23,
+      "label": "Parametric equations",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Computer Graphic": [
+          {
+            "cs_topic": "Vectors, Curves/Surfaces (\u00a72) [all]",
+            "rationale": "Parametric curves (pages 39-41)"
+          },
+          {
+            "cs_topic": "Blending Functions, B\u00e9zier/Hermite, Catmull-Rom, Interpolating vs. Approximating, Subdivision (curves and surfaces), Picewise Curves/Splines (\u00a715) [all]",
+            "rationale": "Parametric equation of a line segment. (page 377) B\u00e9zier curves are parametric. (page 380)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AM",
+      "number_id": 13,
+      "label": "Integration by parts",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Advanced Deep Learning",
+            "rationale": "Integration by parts is a basic integration technique. Certain probabilistic models (e.g., expectation-maximization) or advanced optimizations might require solving integrals."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "Used in solving integrals that might arise in probabilistic analysis or physics-based simulations."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Probabilistic reasoning",
+            "rationale": "A core technique for solving integrals, which is necessary for working with continuous probability distributions (e.g., finding expected values)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "T",
+      "number_id": 28,
+      "label": "Antiderivatives",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Advanced Deep Learning",
+            "rationale": "Antiderivatives are the basis of integration, which is used in probabilistic ML (e.g., calculating probabilities from a PDF)."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Algorithm design and analysis",
+            "rationale": "The concept of an antiderivative is fundamental to integration, which can be used in probabilistic analysis of algorithms."
+          }
+        ]
+      }
+    },
+    {
+      "id": "BH",
+      "number_id": 17,
+      "label": "Taylor series",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Taylor series are used to approximate functions. Gradient descent is based on a first-order Taylor approximation (linear approx). Newton's method uses a second-order (quadratic) approximation."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Numerical methods",
+            "rationale": "Taylor series are the foundation for many numerical approximation algorithms (e.g., approximating sin(x) or e^x) and for understanding the error of those approximations."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Taylor series provide the theoretical foundation for optimization methods, explaining *why* gradient descent (1st order approx) and Newton's method (2nd order approx) work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "BK",
+      "number_id": 15,
+      "label": "Polar coordinates",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Working with data",
+            "rationale": "Some datasets may be more naturally represented in polar coordinates (e.g., sensor data, directional data)."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Geometric algorithms",
+            "rationale": "Algorithms dealing with circular or rotational geometry, or pathfinding, may be simplified by using polar coordinates."
+          }
+        ]
+      }
+    },
+    {
+      "id": "V",
+      "number_id": 19,
+      "label": "Related rates",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "X",
+      "number_id": 26,
+      "label": "Optimization",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Gradient descent is all about optimizing a function by using gradients. This is closely related to optimizing a function using derivatives (since the gradient just generalizes the derivative)"
+          },
+          {
+            "cs_topic": "Regularization",
+            "rationale": "There are many settings with non-unique minimizers unless you use regularization."
+          },
+          {
+            "cs_topic": "Regression problems",
+            "rationale": "To fit the weights for a regression problem, we optimize a loss function by finding a closed form for the min value. This is analogous to other calculus examples of optimization."
+          },
+          {
+            "cs_topic": "Classification problems",
+            "rationale": "To fit a classification problem, we optimize either the likelihood or loss function by setting the parameter values. This is analogous to other calculus examples of optimization."
+          },
+          {
+            "cs_topic": "Neural Networks",
+            "rationale": "Identifying the weights in a neural network is framed as an optimization problem."
+          },
+          {
+            "cs_topic": "Advanced Deep Learning",
+            "rationale": "Advanced Deep Learning requires at least as much knowledge as Neural Networks."
+          },
+          {
+            "cs_topic": "Probabilistic models",
+            "rationale": "Fitting the parameters of a probabilistic model typically happens via optimization (e.g., finding the parameters to achieve the MAP or MLE )."
+          },
+          {
+            "cs_topic": "Graphical models",
+            "rationale": "Graphical models framed as optimization problems."
+          },
+          {
+            "cs_topic": "Topic models",
+            "rationale": "Topic models are often fit with expectation maximization. Deriving the maximization step requires optimizing a function."
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Matrix Operations  (§28)",
+            "rationale": "The linear regression is an optimization problem. (pages 841-844)"
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Learning from Examples (§19)",
+            "rationale": "Optimizing parameters over a loss function involves applied optimization."
+          },
+          {
+            "cs_topic": "Learning Probabilistic Models (§21)",
+            "rationale": "Optimizing parameters to identify an MLE or MAP estimate is an optimization"
+          },
+          {
+            "cs_topic": "Deep Learning (§22)",
+            "rationale": "Optimizing parameters over a loss function involves applied optimization."
+          },
+          {
+            "cs_topic": "Robotics (§26)",
+            "rationale": "Optial control focuses on using gradients for optimization."
+          }
+        ]
+      }
+    },
+    {
+      "id": "Y",
+      "number_id": 22,
+      "label": "The mean value theorem",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "Z",
+      "number_id": 24,
+      "label": "Sketching and graphing functions using information from derivatives",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AA",
+      "number_id": 29,
+      "label": "Motivating the need for integrals and approximating the area under curves",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Model evaluation techniques",
+            "rationale": "Area under the curve (AUC) to evaluate ML models; also p-values"
+          },
+          {
+            "cs_topic": "Regression problems",
+            "rationale": "In linear regression, the value of area under a curve comes up in the computation of the confidence intervals. "
+          },
+          {
+            "cs_topic": "Classification problems",
+            "rationale": "Area under the curve metric for classifiers; also the error function for Gaussian data"
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Summations (Appendix A)",
+            "rationale": "On pages 1150-1151, the authors discuss how it can sometimes be useful to bound discrete summations by using integrals.  The figures on page 1151 should look VERY familiar to anyone who has taught how integrals and Reimann sums relate to areas under a curve!"
+          },
+          {
+            "cs_topic": "Probabilistic Analysis and Randomized Algorithms (§5)",
+            "rationale": "Use of integrals to bound a discrete sum is based on the understanding of how integrals relate to Riemann sums."
+          }
+        ],
+        "Artificial Intelligence": [],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Signal Processing Concepts (§9)  [§9.1, §9.2, §9.3, §9.4]",
+            "rationale": "The integral that used in defining the convolution is interpreted as the area under the curve of the product of two functions. (page 194) The scaling of a filter uses some reasoning that relies on the connection between integrals and areas. (page 201)"
+          },
+          {
+            "cs_topic": "Global Illumination (§23) [all]",
+            "rationale": "The transport equation involves an integral. (pages 614, 617, 620)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AC",
+      "number_id": 30,
+      "label": "Definite integrals",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Model evaluation techniques",
+            "rationale": "Models are commonly evaluated using the AUC curve, and integrals are helpful for understanding the idea of calculating the area under a curve."
+          }
+        ],
+        "Algorithms": [],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Probabilistic Reasoning (§13)",
+            "rationale": "As discussed in Application to probability, a soft threshold is defined using the integral of the standard normal. Having some knowledge about the big idea of an integral seems like it would help with understanding."
+          },
+          {
+            "cs_topic": "Probabilistic Reasoning over Time (§14)",
+            "rationale": "The derivation of the closed forms for the forward step require on integration."
+          },
+          {
+            "cs_topic": "Learning Probabilistic Models (§21)",
+            "rationale": "The integral of a Gaussian is taken, and the fact that this must be equal to 1 is used."
+          },
+          {
+            "cs_topic": "Robotics (§26)",
+            "rationale": "Integrals are used extensively in the planning and control section."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Signal Processing Concepts (§9)  [§9.1, §9.2, §9.3, §9.4]",
+            "rationale": "Moving averages smoothing is expresssed as an integral. (page 188) Convolution of two continuous functions is defined using an integral. (page 194) 2D convolutions are defined as integrals. (page 200)"
+          },
+          {
+            "cs_topic": "Defining/Storing/Rendering (§22) [all]",
+            "rationale": "Convolution surface expressed as an integral. (page 592)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AD",
+      "number_id": 31,
+      "label": "The fundamental theorem of calculus",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Making Simple Decisions (§15)",
+            "rationale": "On page 527, \"The probability density function is the derivative of the cumulative distribution function, so the density for X , the maximum of k estimates, is...\".  I would argue that to understand the relationship between the PDF and the CDF in probability, you really need to understand the fundamental theorem of calculus (at a conceptual level)."
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Signal Processing Concepts (§9)  [§9.1, §9.2, §9.3, §9.4]",
+            "rationale": "The computation of two box filter functions relies on computing an integral. (page 194)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AE",
+      "number_id": 38,
+      "label": "Using integrals to find the area between two curves",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AF",
+      "number_id": 40,
+      "label": "Using integrals to find the volume of solids of revolution",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AG",
+      "number_id": 43,
+      "label": "Using integrals to find arc length and surface area",
+      "calc_level": "Calculus I",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AH",
+      "number_id": 41,
+      "label": "Using integrals for physical applications",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Computer Graphic": [
+          {
+            "cs_topic": "Artistic Principles, Keyframing/Interpolation, Physically-Based, Spring-Mass Models, Behavioral models (§16) [all]",
+            "rationale": "Hooke's law gives a model for springs."
+          }
+        ]
+      }
+    },
+    {
+      "id": "AI",
+      "number_id": 32,
+      "label": "Indefinite integrals and the net change theorem",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Deep Learning (§22)",
+            "rationale": "Cross-entropy is defined in terms of an integral. Integrals are also used in the variational inference section to deal with KL divergence."
+          }
+        ]
+      }
+    },
+    {
+      "id": "AK",
+      "number_id": 33,
+      "label": "Integrals of exponential and logarithmic functions",
+      "calc_level": "Calculus I",
+      "cs_categories": [
+        "Machine Learning",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Model evaluation techniques",
+            "rationale": "Error function for Gaussian data"
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Probabilistic Reasoning over Time (§14)",
+            "rationale": "The one-step predicted distribution, expressed as an integral, is computed. (page 499)"
+          },
+          {
+            "cs_topic": "Learning Probabilistic Models (§21)",
+            "rationale": "A probability, expressed as an integral, is computed. (page 785)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AN",
+      "number_id": 48,
+      "label": "Trigonometric integrals",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AO",
+      "number_id": 49,
+      "label": "Trigonometric substitutions",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AP",
+      "number_id": 50,
+      "label": "Integration using the method of partial fractions",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AQ",
+      "number_id": 51,
+      "label": "General integration strategies and approaches",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AR",
+      "number_id": 52,
+      "label": "Integration using tables, technology, and numerical approaches",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AS",
+      "number_id": 53,
+      "label": "Improper integrals",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AT",
+      "number_id": 54,
+      "label": "Application to probability",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Model evaluation techniques",
+            "rationale": "Type I and type 2 errors in classification, p-values, error functions"
+          },
+          {
+            "cs_topic": "Bias-variance tradeoff",
+            "rationale": "The bias variance tradeoff requires understanding probabilistic concepts like a probability density function, mean, and variance."
+          },
+          {
+            "cs_topic": "Classification problems",
+            "rationale": "Understanding probabilistic classifiers, such as Naïve Bayes, requires some knowledge of probability."
+          },
+          {
+            "cs_topic": "Regression problems",
+            "rationale": "In linear regression, the value of area under a curve comes up in the computation of the confidence intervals. Also, maximum likelihood estimation often comes up in the context of  regression, and understanding the likelihood means understanding some probability, for example, relying on Gaussian likelihoods."
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Probabilistic Reasoning (§13)",
+            "rationale": "A soft thereshold is defined using the integral of the standard normal distribution. (page 441)"
+          },
+          {
+            "cs_topic": "Probabilistic Reasoning over Time (§14)",
+            "rationale": "The one-step predicted distribution is expressed as an integral. (page 497)"
+          },
+          {
+            "cs_topic": "Making Simple Decisions (§15)",
+            "rationale": "The concept of an action stochastically domining another action is formally defined using integrals. (page 531) An example of stochastic dominacy is shown. (page 532) A reasoning based on integral is shown. (page 546)"
+          },
+          {
+            "cs_topic": "Learning Probabilistic Models (§21)",
+            "rationale": "A probability, expressed as an integral, is computed. (page 785)"
+          },
+          {
+            "cs_topic": "Deep Learning (§22)",
+            "rationale": "The cross-entry loss is defined an an integral. (page 809) The probability is expressed as an integral. (page 828) The KL divergence is expressed as an integral. (page 829)"
+          },
+          {
+            "cs_topic": "Robotics (§26)",
+            "rationale": "The recursive filtering equation is expressed using an integral. (page 939) The functional J is expressed as an integral. (page 956) Several concepts are expressed as integrals"
+          }
+        ]
+      }
+    },
+    {
+      "id": "AU",
+      "number_id": 55,
+      "label": "Application to physics",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Computer Graphic": [
+          {
+            "cs_topic": "Perception (§19) [all]",
+            "rationale": "The tristimulus values (L, M, S) are expressed as integrals of a spectral composition function. (page 497) Saying that two spectral distributions generate the same color is expressed as 3 intergal equations. "
+          }
+        ]
+      }
+    },
+    {
+      "id": "AV",
+      "number_id": 56,
+      "label": "Application to economics",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AW",
+      "number_id": 57,
+      "label": "Introducing the concept of differential equations",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Artificial Intelligence",
+        "Computer Graphic"
+      ],
+      "rationales": {
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Robotics (§26)",
+            "rationale": "A differential equation is solved to compute the theta function. (page 957)"
+          }
+        ],
+        "Computer Graphic": [
+          {
+            "cs_topic": "Advanced Ray Tracing (§13) [all]",
+            "rationale": "Solve a differential equation. (page 325)"
+          },
+          {
+            "cs_topic": "Artistic Principles, Keyframing/Interpolation, Physically-Based, Spring-Mass Models, Behavioral models (§16) [all]",
+            "rationale": "Moving particle introduced as an ODE."
+          }
+        ]
+      }
+    },
+    {
+      "id": "AX",
+      "number_id": 58,
+      "label": "Direction fields and Eulers method",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AY",
+      "number_id": 59,
+      "label": "Separable differential equations",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "AZ",
+      "number_id": 60,
+      "label": "Modeling with differential equations",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "BA",
+      "number_id": 61,
+      "label": "Special first-order linear differential equations",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "BC",
+      "number_id": 63,
+      "label": "Series",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms",
+        "Artificial Intelligence"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Regression problems",
+            "rationale": "Autoregressive model of a time series"
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Summations (Appendix A)",
+            "rationale": "Convergence of series is defined in terms of the convergence of partial sum sequence. (page 1140) Geometric and harmonic series are presented. (page 1142). Definition of a convergent series. Geometric series"
+          },
+          {
+            "cs_topic": "Divide-and-Conquer (§4) [§4 (intro), §4.1, §4.2, §4.4, §4.5, CPP (closest pair of points, §33.4 from 3rd edition)]",
+            "rationale": "Geometric series is used to compute an upper bound. (page 97)"
+          },
+          {
+            "cs_topic": "Dynamic Programming (§14) [§14.1, §14.2, §14.3, §14.4, §14.5]",
+            "rationale": "Geometric series is used to compute a lower bound. (page 389)"
+          },
+          {
+            "cs_topic": "Quicksort (§7)",
+            "rationale": "A harmonic series is used to compute a bound. (page 184)"
+          },
+          {
+            "cs_topic": "Medians and Order Statistics (§9)",
+            "rationale": "A geometric series is used to give an upper bound. (page 235)"
+          },
+          {
+            "cs_topic": "Hash Tables (§11)",
+            "rationale": "A geometric series is used to give an upper bound. (pages 298-299)"
+          }
+        ],
+        "Artificial Intelligence": [
+          {
+            "cs_topic": "Making Complex Decisions (§16)",
+            "rationale": "A geometric series is used. (page 572)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BD",
+      "number_id": 64,
+      "label": "Convergence and divergence",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Machine Learning",
+        "Algorithms"
+      ],
+      "rationales": {
+        "Machine Learning": [
+          {
+            "cs_topic": "Gradient descent",
+            "rationale": "Gradient descent will converge or diverge depending on step size"
+          }
+        ],
+        "Algorithms": [
+          {
+            "cs_topic": "Summations (Appendix A)",
+            "rationale": "Convergence of series is defined in terms of the convergence of partial sum sequence. (page 1140) Geometric and harmonic series are presented. (page 1142). Definition of a convergent series. Geometric series"
+          }
+        ]
+      }
+    },
+    {
+      "id": "BE",
+      "number_id": 65,
+      "label": "Comparison tests",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Algorithms"
+      ],
+      "rationales": {
+        "Algorithms": [
+          {
+            "cs_topic": "Summations (Appendix A)",
+            "rationale": "Some series are obtained by integrating or differentiating both sides of other known series, such as the geometric series. (page 1142) Some series can be approximated by integrals (pages 1150-1151). Differentiate and integrate power series term-by-term. Use the integral test to determine the convergence of a series."
+          },
+          {
+            "cs_topic": "Probabilistic Analysis and Randomized Algorithms (§5)",
+            "rationale": "The series is approximated by integrals in order to get lower and upper bounds. (page 152) Use ideas related to the integral test to get lower and upper bound "
+          },
+          {
+            "cs_topic": "Heapsort (§6)",
+            "rationale": "A series is used to give an upper bound. The series is computed by differentiating the geometric series. (page 169) Uses the value of a series obtained by differentiating the power series to give an upper bound"
+          },
+          {
+            "cs_topic": "Hash Tables (§11)",
+            "rationale": "The series is approximated by integrals in order to get an upper bound. (page 300) Use ideas related to the integral test to get lower and upper bound "
+          }
+        ]
+      }
+    },
+    {
+      "id": "BF",
+      "number_id": 66,
+      "label": "The ratio and root tests",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "BG",
+      "number_id": 67,
+      "label": "Alternating series",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "BI",
+      "number_id": 69,
+      "label": "Power series and functions",
+      "calc_level": "Calculus II",
+      "cs_categories": [
+        "Algorithms"
+      ],
+      "rationales": {
+        "Algorithms": [
+          {
+            "cs_topic": "Summations (Appendix A)",
+            "rationale": "Some series are obtained by integrating or differentiating both sides of other known series, such as the geometric series. (page 1142) Some series can be approximated by integrals (pages 1150-1151). Differentiate and integrate power series term-by-term. Use the integral test to determine the convergence of a series."
+          }
+        ]
+      }
+    },
+    {
+      "id": "BL",
+      "number_id": 72,
+      "label": "Area and arc length in polar coordinates",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    },
+    {
+      "id": "BM",
+      "number_id": 73,
+      "label": "Conic sections",
+      "calc_level": "Calculus II",
+      "cs_categories": [],
+      "rationales": {}
+    }
+  ],
+  "edges": [
+    {
+      "source": "A",
+      "target": "B"
+    },
+    {
+      "source": "B",
+      "target": "C"
+    },
+    {
+      "source": "B",
+      "target": "H"
+    },
+    {
+      "source": "C",
+      "target": "D"
+    },
+    {
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "source": "D",
+      "target": "F"
+    },
+    {
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "source": "D",
+      "target": "J"
+    },
+    {
+      "source": "D",
+      "target": "BB"
+    },
+    {
+      "source": "H",
+      "target": "I"
+    },
+    {
+      "source": "I",
+      "target": "J"
+    },
+    {
+      "source": "I",
+      "target": "N"
+    },
+    {
+      "source": "I",
+      "target": "P"
+    },
+    {
+      "source": "J",
+      "target": "K"
+    },
+    {
+      "source": "J",
+      "target": "L"
+    },
+    {
+      "source": "J",
+      "target": "M"
+    },
+    {
+      "source": "J",
+      "target": "O"
+    },
+    {
+      "source": "J",
+      "target": "S"
+    },
+    {
+      "source": "J",
+      "target": "W"
+    },
+    {
+      "source": "O",
+      "target": "R"
+    },
+    {
+      "source": "O",
+      "target": "Q"
+    },
+    {
+      "source": "O",
+      "target": "U"
+    },
+    {
+      "source": "O",
+      "target": "AJ"
+    },
+    {
+      "source": "O",
+      "target": "AL"
+    },
+    {
+      "source": "O",
+      "target": "AB"
+    },
+    {
+      "source": "O",
+      "target": "BJ"
+    },
+    {
+      "source": "K",
+      "target": "Q"
+    },
+    {
+      "source": "K",
+      "target": "AM"
+    },
+    {
+      "source": "L",
+      "target": "Q"
+    },
+    {
+      "source": "L",
+      "target": "T"
+    },
+    {
+      "source": "L",
+      "target": "BH"
+    },
+    {
+      "source": "L",
+      "target": "BK"
+    },
+    {
+      "source": "M",
+      "target": "Q"
+    },
+    {
+      "source": "M",
+      "target": "T"
+    },
+    {
+      "source": "M",
+      "target": "BH"
+    },
+    {
+      "source": "N",
+      "target": "V"
+    },
+    {
+      "source": "N",
+      "target": "AA"
+    },
+    {
+      "source": "N",
+      "target": "AW"
+    },
+    {
+      "source": "U",
+      "target": "V"
+    },
+    {
+      "source": "Q",
+      "target": "X"
+    },
+    {
+      "source": "Q",
+      "target": "Y"
+    },
+    {
+      "source": "Q",
+      "target": "Z"
+    },
+    {
+      "source": "R",
+      "target": "Z"
+    },
+    {
+      "source": "AA",
+      "target": "AC"
+    },
+    {
+      "source": "AC",
+      "target": "AD"
+    },
+    {
+      "source": "AC",
+      "target": "AE"
+    },
+    {
+      "source": "AC",
+      "target": "AF"
+    },
+    {
+      "source": "AC",
+      "target": "AG"
+    },
+    {
+      "source": "AC",
+      "target": "AH"
+    },
+    {
+      "source": "AC",
+      "target": "AR"
+    },
+    {
+      "source": "AC",
+      "target": "AS"
+    },
+    {
+      "source": "AC",
+      "target": "AU"
+    },
+    {
+      "source": "AC",
+      "target": "AV"
+    },
+    {
+      "source": "AC",
+      "target": "AZ"
+    },
+    {
+      "source": "AC",
+      "target": "BL"
+    },
+    {
+      "source": "T",
+      "target": "AD"
+    },
+    {
+      "source": "T",
+      "target": "AK"
+    },
+    {
+      "source": "T",
+      "target": "AJ"
+    },
+    {
+      "source": "T",
+      "target": "AL"
+    },
+    {
+      "source": "T",
+      "target": "AB"
+    },
+    {
+      "source": "T",
+      "target": "AM"
+    },
+    {
+      "source": "T",
+      "target": "AN"
+    },
+    {
+      "source": "T",
+      "target": "AP"
+    },
+    {
+      "source": "AD",
+      "target": "AI"
+    },
+    {
+      "source": "AJ",
+      "target": "AH"
+    },
+    {
+      "source": "AJ",
+      "target": "AG"
+    },
+    {
+      "source": "AJ",
+      "target": "AO"
+    },
+    {
+      "source": "AJ",
+      "target": "AY"
+    },
+    {
+      "source": "AJ",
+      "target": "BA"
+    },
+    {
+      "source": "AJ",
+      "target": "BL"
+    },
+    {
+      "source": "AK",
+      "target": "AH"
+    },
+    {
+      "source": "AN",
+      "target": "AO"
+    },
+    {
+      "source": "AP",
+      "target": "AQ"
+    },
+    {
+      "source": "AO",
+      "target": "AQ"
+    },
+    {
+      "source": "AM",
+      "target": "AQ"
+    },
+    {
+      "source": "AQ",
+      "target": "AR"
+    },
+    {
+      "source": "AQ",
+      "target": "AS"
+    },
+    {
+      "source": "AQ",
+      "target": "AU"
+    },
+    {
+      "source": "AQ",
+      "target": "AV"
+    },
+    {
+      "source": "AS",
+      "target": "AT"
+    },
+    {
+      "source": "AW",
+      "target": "AX"
+    },
+    {
+      "source": "AW",
+      "target": "AY"
+    },
+    {
+      "source": "AW",
+      "target": "BA"
+    },
+    {
+      "source": "AY",
+      "target": "AZ"
+    },
+    {
+      "source": "BB",
+      "target": "BC"
+    },
+    {
+      "source": "BC",
+      "target": "BD"
+    },
+    {
+      "source": "BD",
+      "target": "BE"
+    },
+    {
+      "source": "BD",
+      "target": "BF"
+    },
+    {
+      "source": "BD",
+      "target": "BG"
+    },
+    {
+      "source": "BD",
+      "target": "BH"
+    },
+    {
+      "source": "BH",
+      "target": "BI"
+    },
+    {
+      "source": "BK",
+      "target": "BL"
+    },
+    {
+      "source": "BK",
+      "target": "BM"
+    },
+    {
+      "source": "BJ",
+      "target": "BM"
+    }
+  ]
+}
