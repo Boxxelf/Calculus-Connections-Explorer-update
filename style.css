@@ -33,7 +33,7 @@ h1 {
 }
 
 .sidebar-left {
-    width: 320px;
+    width: 260px;
     flex-shrink: 0;
     background-color: #f0f0f0;
     padding: 24px 20px;
@@ -44,7 +44,7 @@ h1 {
 }
 
 .sidebar-right {
-    width: 350px;
+    width: 450px;
     flex-shrink: 0;
     background-color: #f0f0f0;
     padding: 20px;
@@ -290,6 +290,20 @@ h1 {
     cursor: not-allowed;
     pointer-events: none;
     background-color: #f5f5f5;
+}
+
+/* CS topics without connections */
+.cs-topic-button.cs-topic-no-connection {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #f5f5f5;
+    color: #9ca3af;
+}
+
+.cs-topic-button.cs-topic-no-connection:hover {
+    background-color: #f5f5f5;
+    border-color: #d1d5db;
+    color: #9ca3af;
 }
 
 .tree-course-left,

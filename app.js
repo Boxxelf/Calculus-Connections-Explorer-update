@@ -166,23 +166,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     Promise.all([
         d3.json('graph_data.json'),
-        d3.text('Calculus topic labeling scheme.csv')
-    ]).then(([graph, calculusCsvText]) => {
+        d3.text('Calculus topic list-Table 1.csv'),
+        d3.text('CS topic lists-Table 1.csv')
+    ]).then(([graph, calculusCsvText, csTopicsCsvText]) => {
         if (!graph) {
             throw new Error('Graph data missing');
         }
 
         const calculusItems = parseCalculusCsv(calculusCsvText);
         const topicLookup = buildTopicLookup(calculusItems);
+        const csTopicsList = parseCSTopicsCsv(csTopicsCsvText);
 
         state.topicLookupByName = topicLookup.byName;
         state.topicMetaByCode = topicLookup.byCode;
         state.calculusHierarchy = topicLookup.hierarchy;
         state.allCourses = Array.from(topicLookup.hierarchy.keys());
+        state.csTopicsList = csTopicsList;
 
         initializeGraph(graph);
         renderCalculusTree(state.calculusHierarchy);
-        renderCSTopicTree(state.nodes);
+        renderCSTopicTree(state.nodes, csTopicsList);
         updateCourseSummary();
         updateCsSelectionSummary();
         applyCourseFilter();
@@ -453,23 +456,232 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        // Handle number_id 19 which has two different nodes
+        if (numberId === 19) {
+            const labelLower = nodeLabel ? nodeLabel.toLowerCase() : '';
+            if (labelLower.includes('chain')) {
+                // The chain rule -> Der7
+                return {
+                    topicCode: 'Der7',
+                    topicName: 'The chain rule',
+                    course: 'Calculus I',
+                    coreIdea: 'Derivatives'
+                };
+            } else if (labelLower.includes('related')) {
+                // Related rates -> Der10
+                return {
+                    topicCode: 'Der10',
+                    topicName: 'Related rates',
+                    course: 'Calculus I',
+                    coreIdea: 'Derivatives'
+                };
+            }
+        }
+
+        // Handle number_id 26 which has two different nodes
+        if (numberId === 26) {
+            const labelLower = nodeLabel ? nodeLabel.toLowerCase() : '';
+            if (labelLower.includes('shape') || labelLower.includes('concavity')) {
+                // The shape of graphs and concavity -> Der14
+                return {
+                    topicCode: 'Der14',
+                    topicName: 'The shape of graphs and concavity',
+                    course: 'Calculus I',
+                    coreIdea: 'Derivatives'
+                };
+            } else if (labelLower.includes('optimization')) {
+                // Optimization -> Der17
+                return {
+                    topicCode: 'Der17',
+                    topicName: 'Optimization',
+                    course: 'Calculus I',
+                    coreIdea: 'Derivatives'
+                };
+            }
+        }
+
+        // Handle number_id 22 which has two different nodes
+        if (numberId === 22) {
+            const labelLower = nodeLabel ? nodeLabel.toLowerCase() : '';
+            if (labelLower.includes('mean value')) {
+                // The mean value theorem -> Der13
+                return {
+                    topicCode: 'Der13',
+                    topicName: 'The mean value theorem',
+                    course: 'Calculus I',
+                    coreIdea: 'Derivatives'
+                };
+            } else if (labelLower.includes('inverse trigonometric')) {
+                // Integrals involving inverse trigonometric functions -> Int13
+                return {
+                    topicCode: 'Int13',
+                    topicName: 'Inverse trigonometric integrals',
+                    course: 'Calculus I',
+                    coreIdea: 'Integrals'
+                };
+            }
+        }
+
+        // Handle number_id 29 which has two different nodes
+        if (numberId === 29) {
+            const labelLower = nodeLabel ? nodeLabel.toLowerCase() : '';
+            if (labelLower.includes('implicit')) {
+                // Implicit differentiation -> Der8
+                return {
+                    topicCode: 'Der8',
+                    topicName: 'Implicit differentiation',
+                    course: 'Calculus I',
+                    coreIdea: 'Derivatives'
+                };
+            } else if (labelLower.includes('integrals') || labelLower.includes('area')) {
+                // Motivating the need for integrals and approximating the area under curves -> Int2
+                return {
+                    topicCode: 'Int2',
+                    topicName: 'Introduction to integrals and area approximation',
+                    course: 'Calculus I',
+                    coreIdea: 'Integrals'
+                };
+            }
+        }
+
+        // Handle number_id 30 which has two different nodes
+        if (numberId === 30) {
+            const labelLower = nodeLabel ? nodeLabel.toLowerCase() : '';
+            if (labelLower.includes('newton')) {
+                // Newtons method -> Der18
+                return {
+                    topicCode: 'Der18',
+                    topicName: "Newton's method",
+                    course: 'Calculus I',
+                    coreIdea: 'Derivatives'
+                };
+            } else if (labelLower.includes('definite')) {
+                // Definite integrals -> Int3
+                return {
+                    topicCode: 'Int3',
+                    topicName: 'Definite integrals',
+                    course: 'Calculus I',
+                    coreIdea: 'Integrals'
+                };
+            }
+        }
+
         const specialMappings = {
+            // Calculus I - Limits and Continuity
+            1: { // Motivating the need for calculus & limits -> Lim1
+                topicCode: 'Lim1',
+                topicName: 'Introduction to calculus and limits',
+                course: 'Calculus I',
+                coreIdea: 'Limits and Continuity'
+            },
+            2: { // Introducing the limit concept -> Lim2
+                topicCode: 'Lim2',
+                topicName: 'The limit concept',
+                course: 'Calculus I',
+                coreIdea: 'Limits and Continuity'
+            },
+            3: { // Determining limits of functions graphically and numerically -> Lim3
+                topicCode: 'Lim3',
+                topicName: 'Graphical and numerical limits',
+                course: 'Calculus I',
+                coreIdea: 'Limits and Continuity'
+            },
+            4: { // Determining the limits of functions with limit laws -> Lim4
+                topicCode: 'Lim4',
+                topicName: 'Limit laws',
+                course: 'Calculus I',
+                coreIdea: 'Limits and Continuity'
+            },
+            6: { // Limits at infinity and infinite limits -> Lim6
+                topicCode: 'Lim6',
+                topicName: 'Limits at infinity and infinite limits',
+                course: 'Calculus I',
+                coreIdea: 'Limits and Continuity'
+            },
+            7: { // Epsilon-delta definition of the limit -> Lim5
+                topicCode: 'Lim5',
+                topicName: 'Epsilon-delta definition of the limit',
+                course: 'Calculus I',
+                coreIdea: 'Limits and Continuity'
+            },
+            8: { // Continuity, discontinuities, and the intermediate value theorem -> Lim7
+                topicCode: 'Lim7',
+                topicName: 'Continuity and the intermediate value theorem',
+                course: 'Calculus I',
+                coreIdea: 'Limits and Continuity'
+            },
+            // Calculus I - Derivatives
+            9: { // Motivating the need for the derivative and introducing the derivative concept -> Der1
+                topicCode: 'Der1',
+                topicName: 'Introduction to derivatives',
+                course: 'Calculus I',
+                coreIdea: 'Derivatives'
+            },
+            10: { // Defining the derivative as a function -> Der2
+                topicCode: 'Der2',
+                topicName: 'Derivatives as functions',
+                course: 'Calculus I',
+                coreIdea: 'Derivatives'
+            },
+            11: { // Basic differentiation rules -> Der3
+                topicCode: 'Der3',
+                topicName: 'Basic differentiation rules',
+                course: 'Calculus I',
+                coreIdea: 'Derivatives'
+            },
+            12: { // Product and quotient rules -> Der4
+                topicCode: 'Der4',
+                topicName: 'The product and quotient rules',
+                course: 'Calculus I',
+                coreIdea: 'Derivatives'
+            },
+            14: { // Trigonometric derivatives -> Der5
+                topicCode: 'Der5',
+                topicName: 'Trigonometric derivatives',
+                course: 'Calculus I',
+                coreIdea: 'Derivatives'
+            },
+            16: { // Derivatives of logarithmic and exponential functions -> Der6
+                topicCode: 'Der6',
+                topicName: 'Logarithmic and exponential derivatives',
+                course: 'Calculus I',
+                coreIdea: 'Derivatives'
+            },
+            18: { // Applications of derivatives: rates of change and exponential models -> Der9
+                topicCode: 'Der9',
+                topicName: 'Rates of change and exponential models',
+                course: 'Calculus I',
+                coreIdea: 'Derivatives'
+            },
+            25: { // Extreme values -> Der12
+                topicCode: 'Der12',
+                topicName: 'Extreme values',
+                course: 'Calculus I',
+                coreIdea: 'Derivatives'
+            },
             27: { // L'Hopitals rule -> Der16
                 topicCode: 'Der16',
                 topicName: "L'Hôpital's rule (using derivatives to evaluate limits of indeterminate form)",
                 course: 'Calculus I',
                 coreIdea: 'Derivatives'
             },
-            28: { // Antiderivatives -> Int1
-                topicCode: 'Int1',
-                topicName: 'Antiderivatives (the reverse process of differentiation)',
-                course: 'Calculus I',
-                coreIdea: 'Integrals'
-            },
+            // Calculus I - Integrals
             20: { // Hyperbolic functions -> Int12 (Note: graph_data.json says Calculus II, but CSV says Calculus I)
                 topicCode: 'Int12',
                 topicName: 'Hyperbolic functions (derivatives and integrals)',
                 course: 'Calculus I', // Using CSV data, not graph_data.json calc_level
+                coreIdea: 'Integrals'
+            },
+            21: { // Integration with the substitution rule -> Int7
+                topicCode: 'Int7',
+                topicName: 'Integration by substitution',
+                course: 'Calculus I',
+                coreIdea: 'Integrals'
+            },
+            28: { // Antiderivatives -> Int1
+                topicCode: 'Int1',
+                topicName: 'Antiderivatives (the reverse process of differentiation)',
+                course: 'Calculus I',
                 coreIdea: 'Integrals'
             },
             31: { // The fundamental theorem of calculus -> Int4
@@ -478,11 +690,207 @@ document.addEventListener('DOMContentLoaded', () => {
                 course: 'Calculus I',
                 coreIdea: 'Integrals'
             },
+            32: { // Indefinite integrals and the net change theorem -> Int5
+                topicCode: 'Int5',
+                topicName: 'Indefinite integrals and the net change theorem',
+                course: 'Calculus I',
+                coreIdea: 'Integrals'
+            },
+            33: { // Integrals of exponential and logarithmic functions -> Int6
+                topicCode: 'Int6',
+                topicName: 'Logarithmic and exponential integrals',
+                course: 'Calculus I',
+                coreIdea: 'Integrals'
+            },
+            38: { // Using integrals to find the area between two curves -> Int8
+                topicCode: 'Int8',
+                topicName: 'Area between curves',
+                course: 'Calculus I',
+                coreIdea: 'Integrals'
+            },
+            40: { // Using integrals to find the volume of solids of revolution -> Int9
+                topicCode: 'Int9',
+                topicName: 'Volume of solids of revolution',
+                course: 'Calculus I',
+                coreIdea: 'Integrals'
+            },
             41: { // Using integrals for physical applications -> Int10
                 topicCode: 'Int10',
                 topicName: 'Using integrals for physical applications (work, force, density, mass, etc.)',
                 course: 'Calculus I',
                 coreIdea: 'Integrals'
+            },
+            43: { // Using integrals to find arc length and surface area -> Int11
+                topicCode: 'Int11',
+                topicName: 'Arc length and surface area',
+                course: 'Calculus I',
+                coreIdea: 'Integrals'
+            },
+            // Calculus II - Advanced integration
+            13: { // Integration by parts -> AdvInt1
+                topicCode: 'AdvInt1',
+                topicName: 'Integration by parts',
+                course: 'Calculus II',
+                coreIdea: 'Advanced integration'
+            },
+            48: { // Trigonometric integrals -> AdvInt2
+                topicCode: 'AdvInt2',
+                topicName: 'Trigonometric integrals',
+                course: 'Calculus II',
+                coreIdea: 'Advanced integration'
+            },
+            49: { // Trigonometric substitutions -> AdvInt3
+                topicCode: 'AdvInt3',
+                topicName: 'Trigonometric substitutions',
+                course: 'Calculus II',
+                coreIdea: 'Advanced integration'
+            },
+            50: { // Integration using the method of partial fractions -> AdvInt4
+                topicCode: 'AdvInt4',
+                topicName: 'Integration by partial fractions',
+                course: 'Calculus II',
+                coreIdea: 'Advanced integration'
+            },
+            51: { // General integration strategies and approaches -> AdvInt5
+                topicCode: 'AdvInt5',
+                topicName: 'Integration strategies',
+                course: 'Calculus II',
+                coreIdea: 'Advanced integration'
+            },
+            52: { // Integration using tables, technology, and numerical approaches -> AdvInt6
+                topicCode: 'AdvInt6',
+                topicName: 'Numerical and table-based integration',
+                course: 'Calculus II',
+                coreIdea: 'Advanced integration'
+            },
+            53: { // Improper integrals -> AdvInt7
+                topicCode: 'AdvInt7',
+                topicName: 'Improper integrals',
+                course: 'Calculus II',
+                coreIdea: 'Advanced integration'
+            },
+            54: { // Application to probability -> AdvInt8
+                topicCode: 'AdvInt8',
+                topicName: 'Probability applications',
+                course: 'Calculus II',
+                coreIdea: 'Advanced integration'
+            },
+            55: { // Application to physics -> AdvInt9
+                topicCode: 'AdvInt9',
+                topicName: 'Advanced physical applications',
+                course: 'Calculus II',
+                coreIdea: 'Advanced integration'
+            },
+            56: { // Application to economics -> AdvInt10
+                topicCode: 'AdvInt10',
+                topicName: 'Economics applications',
+                course: 'Calculus II',
+                coreIdea: 'Advanced integration'
+            },
+            // Calculus II - Differential Equations
+            57: { // Introducing the concept of differential equations -> DiffEq1
+                topicCode: 'DiffEq1',
+                topicName: 'Introduction to differential equations',
+                course: 'Calculus II',
+                coreIdea: 'Differential Equations'
+            },
+            58: { // Direction fields and Eulers method -> DiffEq2
+                topicCode: 'DiffEq2',
+                topicName: "Direction fields and Euler's method",
+                course: 'Calculus II',
+                coreIdea: 'Differential Equations'
+            },
+            59: { // Separable differential equations -> DiffEq3
+                topicCode: 'DiffEq3',
+                topicName: 'Separable differential equations',
+                course: 'Calculus II',
+                coreIdea: 'Differential Equations'
+            },
+            60: { // Modeling with differential equations -> DiffEq4
+                topicCode: 'DiffEq4',
+                topicName: 'Modeling with differential equations',
+                course: 'Calculus II',
+                coreIdea: 'Differential Equations'
+            },
+            61: { // Special first-order linear differential equations -> DiffEq5
+                topicCode: 'DiffEq5',
+                topicName: 'Special first-order linear differential equations',
+                course: 'Calculus II',
+                coreIdea: 'Differential Equations'
+            },
+            // Calculus II - Sequences and Series
+            5: { // Sequences -> SeqSer1
+                topicCode: 'SeqSer1',
+                topicName: 'Sequences',
+                course: 'Calculus II',
+                coreIdea: 'Sequences and Series'
+            },
+            17: { // Taylor series -> SeqSer7
+                topicCode: 'SeqSer7',
+                topicName: 'Taylor series',
+                course: 'Calculus II',
+                coreIdea: 'Sequences and Series'
+            },
+            63: { // Series -> SeqSer2
+                topicCode: 'SeqSer2',
+                topicName: 'Series',
+                course: 'Calculus II',
+                coreIdea: 'Sequences and Series'
+            },
+            64: { // Convergence and divergence -> SeqSer3
+                topicCode: 'SeqSer3',
+                topicName: 'Convergence and divergence',
+                course: 'Calculus II',
+                coreIdea: 'Sequences and Series'
+            },
+            65: { // Comparison tests -> SeqSer4
+                topicCode: 'SeqSer4',
+                topicName: 'Comparison tests',
+                course: 'Calculus II',
+                coreIdea: 'Sequences and Series'
+            },
+            66: { // The ratio and root tests -> SeqSer5
+                topicCode: 'SeqSer5',
+                topicName: 'The ratio and root tests',
+                course: 'Calculus II',
+                coreIdea: 'Sequences and Series'
+            },
+            67: { // Alternating series -> SeqSer6
+                topicCode: 'SeqSer6',
+                topicName: 'Alternating series',
+                course: 'Calculus II',
+                coreIdea: 'Sequences and Series'
+            },
+            69: { // Power series and functions -> SeqSer8
+                topicCode: 'SeqSer8',
+                topicName: 'Power series and functions',
+                course: 'Calculus II',
+                coreIdea: 'Sequences and Series'
+            },
+            // Calculus II - Parametric Equations and Polar Coordinates
+            15: { // Polar coordinates -> ParamPol2
+                topicCode: 'ParamPol2',
+                topicName: 'Polar coordinates',
+                course: 'Calculus II',
+                coreIdea: 'Parametric Equations and Polar Coordinates'
+            },
+            23: { // Parametric equations -> ParamPol1
+                topicCode: 'ParamPol1',
+                topicName: 'Parametric equations',
+                course: 'Calculus II',
+                coreIdea: 'Parametric Equations and Polar Coordinates'
+            },
+            72: { // Area and arc length in polar coordinates -> ParamPol3
+                topicCode: 'ParamPol3',
+                topicName: 'Area and arc length in polar coordinates',
+                course: 'Calculus II',
+                coreIdea: 'Parametric Equations and Polar Coordinates'
+            },
+            73: { // Conic sections -> ParamPol4
+                topicCode: 'ParamPol4',
+                topicName: 'Conic sections',
+                course: 'Calculus II',
+                coreIdea: 'Parametric Equations and Polar Coordinates'
             }
         };
         return specialMappings[numberId];
@@ -593,7 +1001,37 @@ document.addEventListener('DOMContentLoaded', () => {
             .property('disabled', !isSelected);
     }
 
-    function renderCSTopicTree(nodes) {
+    function parseCSTopicsCsv(rawText) {
+        if (!rawText) {
+            return [];
+        }
+
+        const strippedLines = rawText.split(/\r?\n/).filter((line, index) => {
+            if (index === 0 && /^table/i.test(line.trim())) {
+                return false;
+            }
+            return line.trim().length > 0;
+        });
+
+        const parsedRows = d3.csvParseRows(strippedLines.join('\n'));
+        const headerIndex = parsedRows.findIndex((row) => row[0] === 'Course');
+        const dataRows = headerIndex >= 0 ? parsedRows.slice(headerIndex + 1) : parsedRows;
+
+        const result = [];
+        dataRows.forEach((row) => {
+            const [course, topicName] = row;
+            if (course && topicName) {
+                result.push({
+                    course: course.trim(),
+                    topicName: topicName.trim()
+                });
+            }
+        });
+
+        return result;
+    }
+
+    function renderCSTopicTree(nodes, csTopicsList) {
         const container = d3.select('#cs-topic-tree');
         if (container.empty()) {
             return;
@@ -601,30 +1039,44 @@ document.addEventListener('DOMContentLoaded', () => {
         
         container.html('');
 
-        const categoryMap = new Map();
-
+        // Build a map of topics that have connections (from nodes)
+        const topicsWithConnections = new Map();
         nodes.forEach((node) => {
             const rationales = node.rationales || {};
             Object.entries(rationales).forEach(([category, items]) => {
-                if (!categoryMap.has(category)) {
-                    categoryMap.set(category, new Map());
+                if (!topicsWithConnections.has(category)) {
+                    topicsWithConnections.set(category, new Set());
                 }
-                const topicMap = categoryMap.get(category);
                 items.forEach((item) => {
                     const topicName = (item.cs_topic || '').trim();
-                    if (!topicName) {
-                        return;
+                    if (topicName) {
+                        topicsWithConnections.get(category).add(topicName);
                     }
-                    const existing = topicMap.get(topicName) || { topicName, count: 0 };
-                    existing.count += 1;
-                    topicMap.set(topicName, existing);
                 });
             });
         });
-        
-        const sortedCategories = Array.from(categoryMap.entries()).sort((a, b) => a[0].localeCompare(b[0]));
 
-        sortedCategories.forEach(([category, topicMap]) => {
+        // Group CS topics by course/category
+        const topicsByCategory = new Map();
+        if (csTopicsList && csTopicsList.length > 0) {
+            csTopicsList.forEach((item) => {
+                const category = item.course;
+                if (!topicsByCategory.has(category)) {
+                    topicsByCategory.set(category, []);
+                }
+                topicsByCategory.get(category).push(item.topicName);
+            });
+        } else {
+            // Fallback to old behavior if no CS topics list provided
+            topicsWithConnections.forEach((topicSet, category) => {
+                topicsByCategory.set(category, Array.from(topicSet));
+            });
+        }
+
+        // Sort categories
+        const sortedCategories = Array.from(topicsByCategory.entries()).sort((a, b) => a[0].localeCompare(b[0]));
+
+        sortedCategories.forEach(([category, topicNames]) => {
             const categoryGroup = container.append('div').attr('class', 'cs-category-group');
             
             const categoryButton = categoryGroup.append('div').attr('class', 'cs-category-button');
@@ -647,21 +1099,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 toggleIcon.text(isOpen ? '▸' : '▾');
             });
 
-            const topics = Array.from(topicMap.values()).sort((a, b) => a.topicName.localeCompare(b.topicName));
+            // Check which topics have connections
+            const topicsWithConnectionsSet = topicsWithConnections.get(category) || new Set();
 
-            const topicButtons = [];
-            topics.forEach((topicEntry) => {
+            topicNames.forEach((topicName) => {
+                const hasConnection = topicsWithConnectionsSet.has(topicName);
                 const topicButton = topicsContainer.append('button')
                     .attr('type', 'button')
-                    .attr('class', 'cs-topic-button')
+                    .attr('class', `cs-topic-button ${!hasConnection ? 'cs-topic-no-connection' : ''}`)
                     .attr('data-category', category)
-                    .attr('data-topic', topicEntry.topicName)
-                    .text(topicEntry.topicName)
+                    .attr('data-topic', topicName)
+                    .text(topicName)
                     .on('click', (event) => {
                         event.stopPropagation();
-                        toggleCSTopicSelection(category, topicEntry.topicName, topicButton);
+                        if (hasConnection) {
+                            toggleCSTopicSelection(category, topicName, topicButton);
+                        }
                     });
-                topicButtons.push(topicButton);
+
+                if (!hasConnection) {
+                    topicButton.property('disabled', true);
+                }
             });
 
             // Handle select all checkbox
@@ -672,6 +1130,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 topicButtons.each(function() {
                     const btn = d3.select(this);
+                    if (btn.property('disabled')) return; // Skip disabled topics
                     const topicName = btn.attr('data-topic');
                     const isCurrentlyActive = btn.classed('active');
                     
@@ -682,7 +1141,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
                 
-                updateSelectAllCheckbox(category, topics.length);
+                const enabledTopics = topicsContainer.selectAll('.cs-topic-button:not([disabled])').size();
+                updateSelectAllCheckbox(category, enabledTopics);
             });
         });
     }
@@ -1276,6 +1736,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateCalcPillRationaleState(nodeData.id, hasMatchingRationales, selectedFilters.length > 0);
 
+        // Render LaTeX after all content is added
+        if (window.renderMathInElement && rationaleContent.node()) {
+            window.renderMathInElement(rationaleContent.node(), {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '\\[', right: '\\]', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\(', right: '\\)', display: false}
+                ],
+                throwOnError: false
+            });
+        }
+
         rationaleDisplay.classed('hidden', false);
         emptyState.classed('hidden', true);
     }
@@ -1301,7 +1774,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         items.forEach((item) => {
             const block = rationaleContent.append('div').attr('class', 'rationale-item');
-            block.html(`<strong>${item.cs_topic || ''}:</strong> ${item.rationale || ''}`);
+            const rationaleText = item.rationale || '';
+            block.html(`<strong>${item.cs_topic || ''}:</strong> ${rationaleText}`);
         });
     }
 
