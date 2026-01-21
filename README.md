@@ -5,7 +5,7 @@
 This repository contains the source code and data for the **Calculus Connections Explorer**, an interactive tool for exploring how computer science topics connect to core calculus ideas.
 
 The live site is available here:  
-[https://boxxelf.github.io/Calculus-Connections-Explorer/](https://boxxelf.github.io/Calculus-Connections-Explorer/)
+[https://boxxelf.github.io/Calculus-Connections-Explorer/](https://boxxelf.github.io/Calculus-Connections-Explorer-update/)
 
 ---
 
