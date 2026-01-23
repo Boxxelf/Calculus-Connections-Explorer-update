@@ -441,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Node Z: Sketching/graphing functions -> Der15
                 return {
                     topicCode: 'Der15',
-                    topicName: 'Sketching/graphing functions using information from derivatives',
+                    topicName: 'Graphing with derivatives',
                     course: 'Calculus I',
                     coreIdea: 'Derivatives'
                 };
@@ -661,14 +661,14 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             27: { // L'Hopitals rule -> Der16
                 topicCode: 'Der16',
-                topicName: "L'Hôpital's rule (using derivatives to evaluate limits of indeterminate form)",
+                topicName: "L'Hôpital's rule",
                 course: 'Calculus I',
                 coreIdea: 'Derivatives'
             },
             // Calculus I - Integrals
             20: { // Hyperbolic functions -> Int12 (Note: graph_data.json says Calculus II, but CSV says Calculus I)
                 topicCode: 'Int12',
-                topicName: 'Hyperbolic functions (derivatives and integrals)',
+                topicName: 'Hyperbolic functions',
                 course: 'Calculus I', // Using CSV data, not graph_data.json calc_level
                 coreIdea: 'Integrals'
             },
@@ -680,13 +680,13 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             28: { // Antiderivatives -> Int1
                 topicCode: 'Int1',
-                topicName: 'Antiderivatives (the reverse process of differentiation)',
+                topicName: 'Antiderivatives',
                 course: 'Calculus I',
                 coreIdea: 'Integrals'
             },
             31: { // The fundamental theorem of calculus -> Int4
                 topicCode: 'Int4',
-                topicName: 'The fundamental theorem of calculus (FTC)',
+                topicName: 'The fundamental theorem of calculus',
                 course: 'Calculus I',
                 coreIdea: 'Integrals'
             },
@@ -716,7 +716,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             41: { // Using integrals for physical applications -> Int10
                 topicCode: 'Int10',
-                topicName: 'Using integrals for physical applications (work, force, density, mass, etc.)',
+                topicName: 'Physical applications of integrals',
                 course: 'Calculus I',
                 coreIdea: 'Integrals'
             },
@@ -1386,7 +1386,17 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (state.calcSortMode === 'connections') {
             sorted.sort((a, b) => b.totalConnections - a.totalConnections);
         } else {
-            // Default: course -> core idea -> topic code
+            // Default: course -> core idea -> topic code (with numeric sorting)
+            // Helper function to extract prefix and number from topic code (e.g., "Lim1" -> ["Lim", 1])
+            const parseTopicCode = (code) => {
+                if (!code) return { prefix: '', num: 0 };
+                const match = String(code).match(/^([A-Za-z]+)(\d+)$/);
+                if (match) {
+                    return { prefix: match[1], num: parseInt(match[2], 10) };
+                }
+                return { prefix: code, num: 0 };
+            };
+            
             sorted.sort((a, b) => {
                 const courseA = (a.node.course || a.node.calc_level || '').localeCompare(
                     b.node.course || b.node.calc_level || ''
@@ -1394,9 +1404,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (courseA !== 0) return courseA;
                 const coreA = (a.node.coreIdea || '').localeCompare(b.node.coreIdea || '');
                 if (coreA !== 0) return coreA;
-                return String(a.node.topicCode || '').localeCompare(
-                    String(b.node.topicCode || '')
-                );
+                
+                // Sort by topic code with numeric ordering
+                const codeA = parseTopicCode(a.node.topicCode);
+                const codeB = parseTopicCode(b.node.topicCode);
+                const prefixCompare = codeA.prefix.localeCompare(codeB.prefix);
+                if (prefixCompare !== 0) return prefixCompare;
+                return codeA.num - codeB.num;
             });
         }
 
@@ -1745,7 +1759,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     {left: '$', right: '$', display: false},
                     {left: '\\(', right: '\\)', display: false}
                 ],
-                throwOnError: false
+                throwOnError: false,
+                preProcess: (math) => math // Ensure math is processed correctly
             });
         }
 
