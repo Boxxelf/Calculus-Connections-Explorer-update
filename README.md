@@ -71,8 +71,8 @@ You can run the explorer locally as a static site:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Boxxelf/Calculus-Concept-Map-Update.git
-   cd Calculus-Concept-Map-Update
+   git clone https://github.com/Boxxelf/Calculus-Connections-Explorer-update.git
+   cd Calculus-Connections-Explorer-update
    ```
 
 2. **Serve the files with any static file server.** For example, using Python:
@@ -101,7 +101,7 @@ A typical workflow is:
 2. Deploy to the `gh-pages` branch or your configured Pages branch.  
    You may use the existing `deploy.sh` script or follow the steps in `DEPLOYMENT.md`.
 3. Confirm that the site is available at your GitHub Pages URL, for example:  
-   [https://boxxelf.github.io/Calculus-Connections-Explorer/](https://boxxelf.github.io/Calculus-Connections-Explorer/)
+   [https://boxxelf.github.io/Calculus-Connections-Explorer-update/](https://boxxelf.github.io/Calculus-Connections-Explorer-update/)
 
 ---
 
@@ -114,7 +114,7 @@ The connections between CS topics and calculus ideas, as well as the written rat
 - A set of **rationales** mapping calculus ideas to CS topics (see `ML_Alg_AI_CG_Rationales_081525(Rationales).csv`).
 
 If you use or extend this work, please credit the **Calculus Connections Explorer** project and include a link to the live site:  
-[https://boxxelf.github.io/Calculus-Connections-Explorer/](https://boxxelf.github.io/Calculus-Connections-Explorer/)
+[https://boxxelf.github.io/Calculus-Connections-Explorer-update/](https://boxxelf.github.io/Calculus-Connections-Explorer-update/)
 
 ---
 
