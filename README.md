@@ -1,6 +1,6 @@
 ## Calculus Connections Explorer
 
-**Updated: 01/05/2026**
+**Updated: 01/23/2026**
 
 This repository contains the source code and data for the **Calculus Connections Explorer**, an interactive tool for exploring how computer science topics connect to core calculus ideas.
 
