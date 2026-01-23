@@ -178,11 +178,7 @@
             "rationale": "In computer science, implicit modeling uses functions to define curves and surfaces, often represented as \\( f(x, y) = 0 \\). Derivatives, particularly gradients, play a crucial role in understanding these implicit functions. The gradient \\( \\nabla f(x, y) = (\\frac{\\partial f}{\\partial x}, \\frac{\\partial f}{\\partial y}) \\) points in the direction of steepest ascent and is perpendicular to the tangent of the curve \\( f(x, y) = 0 \\). This property is essential for operations like normal vector calculation, blending, and geometric transformations in implicit modeling. For example, in defining a circle \\( f(x, y) = x^2 + y^2 - r^2 \\), the gradient helps determine the direction and magnitude of changes around the curve, aiding visualization and manipulation in graphics applications."
           }
         ]
-      },
-      "topicCode": "Der1",
-      "topicName": "Introduction to derivatives",
-      "course": "Calculus I",
-      "coreIdea": "Derivatives"
+      }
     },
     {
       "id": "D",
@@ -300,17 +296,8 @@
       "number_id": 7,
       "label": "Epsilon-delta definition of the limit",
       "calc_level": "Calculus I",
-      "cs_categories": [
-        "Algorithms"
-      ],
-      "rationales": {
-        "Algorithms": [
-          {
-            "cs_topic": "Algorithm design and analysis",
-            "rationale": "The epsilon-delta definition of the limit is an important pre-cursor to formal definitions that appear in algorithm analysis, e.g., the definition of Big-O."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "Lim5",
       "topicName": "Epsilon-delta definition of the limit",
       "course": "Calculus I",
@@ -540,37 +527,8 @@
       "number_id": 24,
       "label": "Linear approximation",
       "calc_level": "Calculus I",
-      "cs_categories": [
-        "Machine Learning"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Data analysis",
-            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
-          },
-          {
-            "cs_topic": "Gradient descent",
-            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
-          },
-          {
-            "cs_topic": "Regression analysis",
-            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
-          },
-          {
-            "cs_topic": "Clustering algorithms",
-            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
-          },
-          {
-            "cs_topic": "Neural networks",
-            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
-          },
-          {
-            "cs_topic": "Advanced deep learning",
-            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "Der11",
       "topicName": "Linear approximations",
       "course": "Calculus I",
@@ -879,37 +837,8 @@
       "number_id": 21,
       "label": "Integration with the substitution rule",
       "calc_level": "Calculus II",
-      "cs_categories": [
-        "Machine Learning"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Data analysis",
-            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
-          },
-          {
-            "cs_topic": "Gradient descent",
-            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
-          },
-          {
-            "cs_topic": "Regression analysis",
-            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
-          },
-          {
-            "cs_topic": "Clustering algorithms",
-            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
-          },
-          {
-            "cs_topic": "Neural networks",
-            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
-          },
-          {
-            "cs_topic": "Advanced deep learning",
-            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "Int7",
       "topicName": "Integration by substitution",
       "course": "Calculus I",
@@ -920,37 +849,8 @@
       "number_id": 22,
       "label": "Integrals involving inverse trigonometric functions",
       "calc_level": "Calculus II",
-      "cs_categories": [
-        "Machine Learning"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Data analysis",
-            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
-          },
-          {
-            "cs_topic": "Gradient descent",
-            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
-          },
-          {
-            "cs_topic": "Regression analysis",
-            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
-          },
-          {
-            "cs_topic": "Clustering algorithms",
-            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
-          },
-          {
-            "cs_topic": "Neural networks",
-            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
-          },
-          {
-            "cs_topic": "Advanced deep learning",
-            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "Int13",
       "topicName": "Inverse trigonometric integrals",
       "course": "Calculus I",
@@ -1011,31 +911,8 @@
       "number_id": 13,
       "label": "Integration by parts",
       "calc_level": "Calculus II",
-      "cs_categories": [
-        "Machine Learning",
-        "Algorithms",
-        "Artificial Intelligence"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Advanced Deep Learning",
-            "rationale": "Integration by parts is a basic integration technique. Certain probabilistic models (e.g., expectation-maximization) or advanced optimizations might require solving integrals."
-          }
-        ],
-        "Algorithms": [
-          {
-            "cs_topic": "Algorithm design and analysis",
-            "rationale": "Used in solving integrals that might arise in probabilistic analysis or physics-based simulations."
-          }
-        ],
-        "Artificial Intelligence": [
-          {
-            "cs_topic": "Probabilistic reasoning",
-            "rationale": "A core technique for solving integrals, which is necessary for working with continuous probability distributions (e.g., finding expected values)."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "AdvInt1",
       "topicName": "Integration by parts",
       "course": "Calculus II",
@@ -1046,24 +923,8 @@
       "number_id": 28,
       "label": "Antiderivatives",
       "calc_level": "Calculus I",
-      "cs_categories": [
-        "Machine Learning",
-        "Algorithms"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Advanced Deep Learning",
-            "rationale": "Antiderivatives are the basis of integration, which is used in probabilistic ML (e.g., calculating probabilities from a PDF)."
-          }
-        ],
-        "Algorithms": [
-          {
-            "cs_topic": "Algorithm design and analysis",
-            "rationale": "The concept of an antiderivative is fundamental to integration, which can be used in probabilistic analysis of algorithms."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "Int1",
       "topicName": "Antiderivatives",
       "course": "Calculus I",
@@ -1230,37 +1091,8 @@
       "number_id": 24,
       "label": "Sketching and graphing functions using information from derivatives",
       "calc_level": "Calculus I",
-      "cs_categories": [
-        "Machine Learning"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Data analysis",
-            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
-          },
-          {
-            "cs_topic": "Gradient descent",
-            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
-          },
-          {
-            "cs_topic": "Regression analysis",
-            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
-          },
-          {
-            "cs_topic": "Clustering algorithms",
-            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
-          },
-          {
-            "cs_topic": "Neural networks",
-            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
-          },
-          {
-            "cs_topic": "Advanced deep learning",
-            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "Der15",
       "topicName": "Graphing with derivatives",
       "course": "Calculus I",
@@ -1401,37 +1233,8 @@
       "number_id": 38,
       "label": "Using integrals to find the area between two curves",
       "calc_level": "Calculus I",
-      "cs_categories": [
-        "Machine Learning"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Data analysis",
-            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
-          },
-          {
-            "cs_topic": "Gradient descent",
-            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
-          },
-          {
-            "cs_topic": "Regression analysis",
-            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
-          },
-          {
-            "cs_topic": "Clustering algorithms",
-            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
-          },
-          {
-            "cs_topic": "Neural networks",
-            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
-          },
-          {
-            "cs_topic": "Advanced deep learning",
-            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "Int8",
       "topicName": "Area between curves",
       "course": "Calculus I",
@@ -1442,37 +1245,8 @@
       "number_id": 40,
       "label": "Using integrals to find the volume of solids of revolution",
       "calc_level": "Calculus I",
-      "cs_categories": [
-        "Machine Learning"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Data analysis",
-            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
-          },
-          {
-            "cs_topic": "Gradient descent",
-            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
-          },
-          {
-            "cs_topic": "Regression analysis",
-            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
-          },
-          {
-            "cs_topic": "Clustering algorithms",
-            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
-          },
-          {
-            "cs_topic": "Neural networks",
-            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
-          },
-          {
-            "cs_topic": "Advanced deep learning",
-            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "Int9",
       "topicName": "Volume of solids of revolution",
       "course": "Calculus I",
@@ -1483,37 +1257,8 @@
       "number_id": 43,
       "label": "Using integrals to find arc length and surface area",
       "calc_level": "Calculus I",
-      "cs_categories": [
-        "Machine Learning"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Data analysis",
-            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
-          },
-          {
-            "cs_topic": "Gradient descent",
-            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
-          },
-          {
-            "cs_topic": "Regression analysis",
-            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
-          },
-          {
-            "cs_topic": "Clustering algorithms",
-            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
-          },
-          {
-            "cs_topic": "Neural networks",
-            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
-          },
-          {
-            "cs_topic": "Advanced deep learning",
-            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "Int11",
       "topicName": "Arc length and surface area",
       "course": "Calculus I",
@@ -1629,37 +1374,8 @@
       "number_id": 50,
       "label": "Integration using the method of partial fractions",
       "calc_level": "Calculus II",
-      "cs_categories": [
-        "Machine Learning"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Data analysis",
-            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
-          },
-          {
-            "cs_topic": "Gradient descent",
-            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
-          },
-          {
-            "cs_topic": "Regression analysis",
-            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
-          },
-          {
-            "cs_topic": "Clustering algorithms",
-            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
-          },
-          {
-            "cs_topic": "Neural networks",
-            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
-          },
-          {
-            "cs_topic": "Advanced deep learning",
-            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "AdvInt4",
       "topicName": "Integration by partial fractions",
       "course": "Calculus II",
@@ -1670,37 +1386,8 @@
       "number_id": 51,
       "label": "General integration strategies and approaches",
       "calc_level": "Calculus II",
-      "cs_categories": [
-        "Machine Learning"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Data analysis",
-            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
-          },
-          {
-            "cs_topic": "Gradient descent",
-            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
-          },
-          {
-            "cs_topic": "Regression analysis",
-            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
-          },
-          {
-            "cs_topic": "Clustering algorithms",
-            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
-          },
-          {
-            "cs_topic": "Neural networks",
-            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
-          },
-          {
-            "cs_topic": "Advanced deep learning",
-            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "AdvInt5",
       "topicName": "Integration strategies",
       "course": "Calculus II",
@@ -1711,37 +1398,8 @@
       "number_id": 52,
       "label": "Integration using tables, technology, and numerical approaches",
       "calc_level": "Calculus II",
-      "cs_categories": [
-        "Machine Learning"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Data analysis",
-            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
-          },
-          {
-            "cs_topic": "Gradient descent",
-            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
-          },
-          {
-            "cs_topic": "Regression analysis",
-            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
-          },
-          {
-            "cs_topic": "Clustering algorithms",
-            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
-          },
-          {
-            "cs_topic": "Neural networks",
-            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
-          },
-          {
-            "cs_topic": "Advanced deep learning",
-            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "AdvInt6",
       "topicName": "Numerical and table-based integration",
       "course": "Calculus II",
@@ -1845,37 +1503,8 @@
       "number_id": 56,
       "label": "Application to economics",
       "calc_level": "Calculus II",
-      "cs_categories": [
-        "Machine Learning"
-      ],
-      "rationales": {
-        "Machine Learning": [
-          {
-            "cs_topic": "Data analysis",
-            "rationale": "Calculus introduces limits, which formalize the concept of approaching a value as inputs change. In data analysis, limits are foundational for understanding trends and behaviors in datasets, particularly when analyzing continuous changes. For example, regression models often rely on calculus concepts like limits to optimize functions and predict outcomes. Gradient descent, a common optimization method, uses limits to iteratively approach the minimum of a cost function. By understanding limits, computer scientists can model and analyze data more effectively, enabling predictions and insights that drive decision-making in fields like machine learning and statistical analysis."
-          },
-          {
-            "cs_topic": "Gradient descent",
-            "rationale": "Calculus introduces the concept of limits, which underpin the definition of derivatives, essential for understanding gradient descent in computer science. Gradient descent is an optimization algorithm used to minimize a function, such as a loss function in machine learning. The algorithm iteratively updates parameters by moving in the direction opposite to the gradient, calculated as the derivative of the function with respect to its parameters. For example, given \\( f(x) = x^2 \\), the derivative \\( f'(x) = 2x \\) determines the slope at any point \\( x \\), guiding the step size and direction. Limits ensure the derivative is well-defined, enabling precise computation of gradients for optimization tasks."
-          },
-          {
-            "cs_topic": "Regression analysis",
-            "rationale": "In regression analysis, calculus plays a crucial role in optimizing the loss function, which measures the error between predicted and actual values. For example, in linear regression, the goal is to minimize the sum of squared errors \\( L(w) = \\sum_{j=1}^N (y_j - h_w(x_j))^2 \\), where \\( h_w(x) = w_1x + w_0 \\) represents the prediction model. Calculus concepts, such as limits and derivatives, are used to compute the gradient of the loss function and iteratively adjust the weights \\( w_0 \\) and \\( w_1 \\) to converge to the global minimum. This process ensures the model accurately fits the data, making calculus foundational for machine learning tasks."
-          },
-          {
-            "cs_topic": "Clustering algorithms",
-            "rationale": "In clustering algorithms like k-means, calculus concepts such as limits and optimization play a crucial role. The algorithm iteratively refines cluster centroids by minimizing the sum of squared distances between data points and their nearest centroid. This process involves evaluating the convergence of centroids, which can be understood through the concept of limits: as iterations progress, the centroids approach a stable configuration where changes become negligible. For example, in a six-dimensional space (e.g., optimizing airport locations), the algorithm minimizes distances by adjusting centroids iteratively until the limit of improvement is reached. Understanding limits ensures precise implementation and analysis of such iterative optimization techniques in computer science."
-          },
-          {
-            "cs_topic": "Neural networks",
-            "rationale": "The concept of limits in calculus is foundational to understanding backpropagation in neural networks, which relies on gradient descent to optimize weights and minimize error. Backpropagation calculates the gradient of the loss function with respect to each weight by propagating errors backward through the network. This process involves evaluating derivatives, which are defined using limits to measure the rate of change of functions. For example, in a neural network, the sigmoid activation function \\( g(x) = \\frac{1}{1 + e^{-x}} \\) requires its derivative \\( g'(x) \\) during backpropagation to update weights effectively. Thus, limits enable precise computation of gradients, ensuring accurate learning in neural networks."
-          },
-          {
-            "cs_topic": "Advanced deep learning",
-            "rationale": "Calculus, particularly the concept of limits, is foundational to understanding advanced deep learning techniques. Limits allow us to analyze the behavior of functions as inputs approach specific values, which is critical for optimization algorithms like gradient descent. In deep learning, gradient descent iteratively minimizes the error of a neural network by calculating derivatives, which rely on the concept of limits to approximate changes in weights and biases. For example, the backpropagation algorithm uses gradients derived from partial derivatives to adjust network parameters, ensuring convergence to an optimal solution. Without limits, these calculations and the underlying mathematical models of neural networks would not be feasible."
-          }
-        ]
-      },
+      "cs_categories": [],
+      "rationales": {},
       "topicCode": "AdvInt10",
       "topicName": "Economics applications",
       "course": "Calculus II",
